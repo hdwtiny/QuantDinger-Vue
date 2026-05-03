@@ -837,6 +837,7 @@
                               :placeholder="$t('trading-assistant.placeholders.selectKlinePeriod')"
                               :getPopupContainer="(triggerNode) => triggerNode.parentNode">
                               <a-select-option value="1m">{{ $t('trading-assistant.form.timeframe1m') }}</a-select-option>
+                              <a-select-option value="3m">{{ $t('trading-assistant.form.timeframe3m') }}</a-select-option>
                               <a-select-option value="5m">{{ $t('trading-assistant.form.timeframe5m') }}</a-select-option>
                               <a-select-option value="15m">{{ $t('trading-assistant.form.timeframe15m') }}</a-select-option>
                               <a-select-option value="30m">{{ $t('trading-assistant.form.timeframe30m') }}</a-select-option>
@@ -926,6 +927,7 @@
                             v-decorator="['timeframe', { initialValue: '15m', rules: [{ required: true }] }]"
                             :getPopupContainer="(triggerNode) => triggerNode.parentNode">
                             <a-select-option value="1m">{{ $t('trading-assistant.form.timeframe1m') }}</a-select-option>
+                            <a-select-option value="3m">{{ $t('trading-assistant.form.timeframe3m') }}</a-select-option>
                             <a-select-option value="5m">{{ $t('trading-assistant.form.timeframe5m') }}</a-select-option>
                             <a-select-option value="15m">{{ $t('trading-assistant.form.timeframe15m') }}</a-select-option>
                             <a-select-option value="30m">{{ $t('trading-assistant.form.timeframe30m') }}</a-select-option>

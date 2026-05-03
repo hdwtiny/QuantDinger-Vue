@@ -490,6 +490,7 @@
                     @change="onTimeframeChange"
                   >
                     <a-select-option value="1m">1m</a-select-option>
+                     <a-select-option value="3m">3m</a-select-option>
                     <a-select-option value="5m">5m</a-select-option>
                     <a-select-option value="15m">15m</a-select-option>
                     <a-select-option value="30m">30m</a-select-option>
@@ -728,6 +729,10 @@ export default {
       if (tf === '1m') {
         return { days: 30, label: '1个月' }
       }
+      // 3分钟线：最多3个月
+      if (tf === '3m') {
+        return { days: 90, label: '3个月' }
+      }
       // 5分钟线：最多6个月
       if (tf === '5m') {
         return { days: 180, label: '6个月' }
@@ -763,6 +768,11 @@ export default {
         presets.push({ key: '7d', days: 7, label: '7D' })
         presets.push({ key: '14d', days: 14, label: '14D' })
         presets.push({ key: '30d', days: 30, label: '30D' })
+      } else if (tf === '3m') {
+        presets.push({ key: '14d', days: 14, label: '14D' })
+        presets.push({ key: '30d', days: 30, label: '30D' })
+        presets.push({ key: '60d', days: 60, label: '2M' })
+        presets.push({ key: '90d', days: 90, label: '3M' })
       } else if (tf === '5m') {
         presets.push({ key: '14d', days: 14, label: '14D' })
         presets.push({ key: '30d', days: 30, label: '30D' })

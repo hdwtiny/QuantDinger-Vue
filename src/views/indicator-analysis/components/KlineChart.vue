@@ -2167,6 +2167,12 @@ registerOverlay({
                  date1.getDate() === date2.getDate() &&
                  date1.getHours() === date2.getHours() &&
                  date1.getMinutes() === date2.getMinutes()
+       case '3m':
+          return date1.getFullYear() === date2.getFullYear() &&
+                 date1.getMonth() === date2.getMonth() &&
+                 date1.getDate() === date2.getDate() &&
+                 date1.getHours() === date2.getHours() &&
+                 Math.floor(date1.getMinutes() / 3) === Math.floor(date2.getMinutes() / 3)
         case '5m':
           return date1.getFullYear() === date2.getFullYear() &&
                  date1.getMonth() === date2.getMonth() &&
@@ -2675,6 +2681,7 @@ registerOverlay({
       }
       const intervalMap = {
         '1m': 5000,
+        '3m': 7000,
         '5m': 10000,
         '15m': 15000,
         '30m': 30000,

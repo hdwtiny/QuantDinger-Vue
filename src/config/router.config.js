@@ -115,6 +115,13 @@ export const asyncRouterMap = [
         hidden: true,
         meta: { title: 'menu.dashboard.portfolio', keepAlive: true, icon: 'fund', permission: ['dashboard'] }
       },
+      // 价格预警
+      {
+        path: '/price-alert',
+        name: 'PriceAlert',
+        component: () => import('@/views/price-alert'),
+        meta: { title: '价格预警', keepAlive: false, icon: 'bell', permission: ['dashboard'] }
+      },
       // 个人中心
       {
         path: '/profile',

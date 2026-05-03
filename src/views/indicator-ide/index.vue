@@ -293,6 +293,7 @@
                       class="tf-group ide-tf-seg ide-tf-seg--chart"
                     >
                       <a-radio-button value="1m">1m</a-radio-button>
+                       <a-radio-button value="3m">3m</a-radio-button>
                       <a-radio-button value="5m">5m</a-radio-button>
                       <a-radio-button value="15m">15m</a-radio-button>
                       <a-radio-button value="30m">30m</a-radio-button>
@@ -1120,6 +1121,7 @@ import message from 'ant-design-vue/es/message'
 
 const TF_MAX_DAYS = {
   '1m': 30,
+  '3m': 60,
   '5m': 180,
   '15m': 365,
   '30m': 365,

@@ -77,6 +77,7 @@
           <a-form-model-item v-if="!isGridOrMartingaleBot" :label="$t('trading-bot.wizard.timeframe')">
             <a-select v-model="baseForm.timeframe">
               <a-select-option value="1m">1 {{ $t('trading-bot.timeframe.min') }}</a-select-option>
+              <a-select-option value="3m">3 {{ $t('trading-bot.timeframe.min') }}</a-select-option>
               <a-select-option value="5m">5 {{ $t('trading-bot.timeframe.min') }}</a-select-option>
               <a-select-option value="15m">15 {{ $t('trading-bot.timeframe.min') }}</a-select-option>
               <a-select-option value="1h">1 {{ $t('trading-bot.timeframe.hour') }}</a-select-option>
